@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'main_app.apps.MainAppConfig',
 
     'oge.apps.OgeConfig',
+
+    'ege.apps.EgeConfig',
 ]
 
 MIDDLEWARE = [
