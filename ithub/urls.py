@@ -5,6 +5,8 @@ import oge.urls as oge_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('', include(main_app_urls)),
+
     path('oge/', include(oge_urls)),
 ]
