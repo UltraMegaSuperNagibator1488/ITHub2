@@ -26,6 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app.apps.MainAppConfig',
+
+    'oge.apps.OgeConfig',
+
     'ege.apps.EgeConfig',
 ]
 
