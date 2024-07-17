@@ -8,9 +8,7 @@ import ege.urls as ege_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
     path('', include(main_app_urls)),
-    path('oge/', include(oge_urls)),
-    path('ege/', include(ege_urls))
-
+    path('edu/oge/', include(oge_urls)),
+    path('edu/ege/', include(ege_urls)),
 ]
