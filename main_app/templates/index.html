@@ -18,15 +18,15 @@
 
     <section id="news">
         <h2>Новости мира информационных технологий</h2>
-        <article>
-            <h3>Новость 1</h3>
-            <p>Краткое описание первой новости</p>
-        </article>
-
-        <article>
-            <h3>Новость 2</h3>
-            <p>Краткое описание второй новости</p>
-        </article>
+        {% for el in news %}
+            {% if el.is_checked %}
+                <article>
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.desc }}</p>
+                    <p>{{ el.upload_time }}</p>
+                </article>
+            {% endif %}
+        {% endfor %}
     </section>
 
     <footer>
