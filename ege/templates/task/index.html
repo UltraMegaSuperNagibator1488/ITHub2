@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tasks</h1>
+
+    <table>
+        <tr><th>id</th><th>ege_num</th><th>desc</th><th>ege_date</th></tr>
+        {% for task in tasks %}
+        <tr><td>{{ task.id }}</td><td>{{ task.ege_num }}</td><td>{{ task.desc }}</td><td>{% if task.ege_data %} {{ task.ege_data }} {% endif %}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
