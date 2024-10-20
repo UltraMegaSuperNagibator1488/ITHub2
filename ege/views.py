@@ -1,14 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
-
-class Task:
-
-    def __init__(self, id: int, ege_num: int, desc: str, ege_data: int | None):
-        self.id = id
-        self.ege_num = ege_num
-        self.desc = desc
-        self.ege_data = ege_data
+from .models import Task
+from django.utils import timezone
 
 
 def index(request):
@@ -16,7 +9,10 @@ def index(request):
 
 
 def tasks(request):
-    return render(request, 'task/index.html')
+    tasks = Task.objects.all()
+
+    data = {'tasks': tasks}
+    return render(request, 'task/index.html', context=data)
 
 
 def preparation_materials(request):
