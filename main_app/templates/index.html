@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITHub</title>
-</head>
-<body>
-    <header>
-        <h1>ITHub</h1>
-        <a href="edu/">Образование</a>
-    </header>
+{% extends "base.html" %}
 
+
+{% block content %}
     <section id="about">
         <h2>О нас</h2>
         <p>Мы - сообщество увлеченных программистов, стремящихся к обмену знаниями и опыту. Наши цели - поддержка и развитие IT-специалистов, проведение мероприятий и создание благоприятной среды для обучения и общения</p>
@@ -28,9 +19,4 @@
             {% endif %}
         {% endfor %}
     </section>
-
-    <footer>
-        <p>&copy; 2024 ITHub. Все права защищены.</p>
-    </footer>
-</body>
-</html>
+{% endblock %}
