@@ -7,4 +7,3 @@ class News(models.Model):
     desc = models.TextField(blank=False, null=False, verbose_name='Description')
     created_at = models.DateTimeField(auto_now_add=True, auto_now=False, blank=False, null=False)
     category = models.ForeignKey(Category, blank=False, null=True, on_delete=models.SET_NULL, related_name='news', verbose_name='Category')
-

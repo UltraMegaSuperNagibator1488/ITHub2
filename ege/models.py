@@ -8,6 +8,6 @@ class Task(models.Model):
     is_used_in_exam = models.BooleanField(default=False, blank=False, null=False, verbose_name="Is used in exam")
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=255, unique=True, blank=False, null=True, verbose_name='Category')
+class Category(models.Model):  # Категория новости
+    name = models.CharField(max_length=255, unique=True, blank=False, null=True, verbose_name='News` categories')
 
