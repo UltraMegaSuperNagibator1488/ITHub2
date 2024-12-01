@@ -9,14 +9,19 @@
 
     <section id="news">
         <h2>Новости мира информационных технологий</h2>
+
+        <table>
+            <tr>
+                <td>Фильтры:</td> <td><a href="?today=1">Сегодня</a></td> <td><a href="?cat=1">1</a></td> <td><a href="?cat=2">2</a></td> <td><a href="/">Отчистить</a></td>
+            </tr>
+        </table>
+
         {% for el in news %}
-            {% if el.is_checked %}
-                <article>
-                    <h3>{{ el.title }}</h3>
-                    <p>{{ el.desc }}</p>
-                    <p>{{ el.upload_time }}</p>
-                </article>
-            {% endif %}
+            <article>
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.desc }}</p>
+                <p>{{ el.created_at }}</p>
+            </article>
         {% endfor %}
     </section>
 {% endblock %}
