@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 
-
 {% block content %}
     <section id="about">
         <h2>О нас</h2>
@@ -12,7 +11,7 @@
 
         <table>
             <tr>
-                <td>Фильтры:</td> <td><a href="?today=1">Сегодня</a></td><td><a href="/">Отчистить</a></td>
+                <td>Фильтры:</td> <td><a href="?today=1">Сегодня</a></td><td><a href="/">Очистить</a></td>
             </tr>
             {% for category in categories %}
                 <tr><td><a href="?cat={{ category.id }}">{{ category.name }}</a></td></tr>

@@ -5,7 +5,7 @@ from django.utils import timezone
 
 
 def index(request):
-    return HttpResponse('<h1>Ege main page</h1><a href="tasks/">Tasks list</a><br><a href="preparation/">Preparation materials</a>')
+    return render(request, 'index.html')
 
 
 def tasks(request):

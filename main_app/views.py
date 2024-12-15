@@ -6,6 +6,7 @@ from datetime import timedelta
 
 def index(request):
     categories = Category.objects.all()
+    news_by_categories = {}
 
     filterargs = {}
 
@@ -14,12 +15,11 @@ def index(request):
             filterargs['created_at__range'] = [timezone.now().date(), timezone.now() + timedelta(days=1)]
 
     if 'cat' in request.GET:
+        category = Category.objects.get(pk=request.GET['cat'])
         filterargs['category'] = request.GET['cat']
+        news_by_categories = category.news.all()
 
     news = News.objects.filter(**filterargs)
-
-    category = Category.objects.get(pk=request.GET['cat'])
-    news_by_categories = category.news.all()
 
     data = {
         'news': news,
