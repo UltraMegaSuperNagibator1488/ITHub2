@@ -1,4 +1,7 @@
 header {
-    background-color: red;
-    font-size: 100px;
+    font-size: 28px;
+}
+
+.rate {
+    display: inline;
 }

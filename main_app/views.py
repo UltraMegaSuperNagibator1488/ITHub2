@@ -21,10 +21,18 @@ def index(request):
 
     news = News.objects.filter(**filterargs)
 
+    for el in news:
+        rates = []
+        for em in el.rate.all():
+            rates.append(em.rate)
+
+        if rates:
+            el.avg_rate = round(sum(rates)/len(rates), 1)
+
     data = {
         'news': news,
         'categories': categories,
-        'news_by_categories': news_by_categories
+        'news_by_categories': news_by_categories,
     }
     return render(request, 'index.html', context=data)
 
