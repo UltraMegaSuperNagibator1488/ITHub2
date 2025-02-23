@@ -7,7 +7,7 @@ class Task(models.Model):
     ege_data = models.CharField(max_length=4, unique=False, blank=False, null=True, verbose_name="First appeared in EGE")
     is_used_in_exam = models.BooleanField(default=False, blank=False, null=False, verbose_name="Is used in exam")
 
+    def __str__(self):
+        return f'№{self.ege_num} ({self.ege_data})'
 
-class Category(models.Model):  # Категория новости
-    name = models.CharField(max_length=255, unique=True, blank=False, null=True, verbose_name='News` categories')
 
